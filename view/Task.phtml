@@ -1,0 +1,42 @@
+<h1>DANH SÁCH TASK</h1>
+
+<table class="table table-striped">
+	<thead>
+	      <tr>
+	        <th>Mã Task</th>
+	        <th>Tên Task</th>
+	        <th>Mô Tả</th>
+	        <th>Ngày bắt đầu</th>
+	        <th>Ngày kết thúc</th>
+	        <th>Ngày tạo</th>
+	        <th>Mã Collection</th>
+	        <th>Trạng thái</th>
+	        <th>Thao tác</th>
+	      </tr>
+	    </thead>
+<?php
+foreach ($data as $dstask) 
+{   
+
+
+    
+    print"
+	    
+	    <tbody>
+
+	      <tr>
+	      	<td><a href='?action=show&id={$dstask->id}'>{$dstask->id}</a></td>  
+	      	<td>{$dstask->TASKNAME} </td> 
+	      	<td>{$dstask->DESCRIPTION} </td> 
+	      	<td>{$dstask->STARTDATE} </td> 
+	      	<td>{$dstask->DUEDATE} </td> 
+	      	<td>{$dstask->CREATEDATE} </td> 
+	      	<td>{$dstask->COLLECTIONID} </td> 
+	      	<td>{$dstask->STATUS} </td> 
+	      	<td><a href='?action=delete&id={$dstask->id}'>Xoá</a></td> <br/> </tr>
+	    </tbody>";
+	    
+}
+// print " <a href='?action=show&id={$item->id}'>{$item->id}</a> - <span style='width:200px; display:inline-block'>{$item->taskName} </span><a href='?action=delete&id={$item->id}'>Xoá</a> <br/> ";
+?>
+</table>

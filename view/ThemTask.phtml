@@ -1,0 +1,53 @@
+<h1>THÊM TASK</h1>
+<hr/>
+
+ <form method ="POST">
+ 	<input type="hidden" name="action" value="add" />
+    <table>
+        <tr>
+            <td>Mã Task</td>
+            <td><input id="Text1" name="id" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Tên Task</td>
+            <td><input id="Text2" name="taskName" type="text" /></td>                   
+        </tr>
+        <tr>
+            <td>Mô Tả</td>
+            <td><input id="Text3" name="description" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Ngày Bắt Đầu</td>
+            <td align="left">
+                <input type="date"  name="current_date" value="<?php echo date("Y-m-d") ?>">
+            </td>
+        </tr>
+        <tr>
+            <td>Ngày Kết Thúc</td>
+            <td align="left">
+                <input type="date"  name="current_date" value="<?php echo date("Y-m-d") ?>">
+            </td>
+        </tr>
+        <tr>
+            <td>Ngày Tạo</td>
+            <td align="left">
+                <input type="date"  name="current_date" value="<?php echo date("Y-m-d") ?>">
+            </td>
+        </tr> 
+        <tr>
+            <td>Mã Collection</td>
+            <td><input id="Text6" name="collectionId" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Trạng Thái</td>
+            <td><input id="Text7" name="status" type="text" /></td>
+        </tr>               
+    </table>
+    <input type="submit" name="btnAddNewRecord" value="Thêm Task Mới" />
+    <?php 
+    	if (isset($data) && $data != "")
+    	{
+    		echo $data;
+    	}
+    ?>   
+</form>

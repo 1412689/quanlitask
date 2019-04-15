@@ -1,0 +1,23 @@
+<h1>THÊM COLLECTION</h1>
+<hr/>
+
+ <form method ="POST">
+ 	<input type="hidden" name="action" value="addcollection" />
+    <table>
+        <tr>
+            <td>Mã Collection</td>
+            <td><input id="Text1" name="id" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Tên Collection</td>
+            <td><input id="Text2" name="collectionName" type="text" /></td>                   
+        </tr>             
+    </table>
+    <input type="submit" name="btnAddNewRecord" value="Thêm Collection Mới" />
+    <?php 
+    	if (isset($data) && $data != "")
+    	{
+    		echo $data;
+    	}
+    ?>   
+</form>

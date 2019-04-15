@@ -1,0 +1,27 @@
+<h1>DANH SÁCH COLLECTION</h1>
+
+<table class="table table-striped">
+	<thead>
+	      <tr>
+	        <th>Mã Collection</th>
+	        <th>Tên Collection</th>
+	      </tr>
+	    </thead>
+<?php
+foreach ($data as $dscollection) 
+{   
+
+    print"
+	    
+	    <tbody>
+
+	      <tr>
+	      	<td><a href='?action=show&id={$dscollection->id}'>{$dscollection->id}</a></td>  
+	      	<td>{$dscollection->collectionName} </td> 
+	      </tr>
+	    </tbody>";
+}
+// print " <a href='?action=show&id={$item->id}'>{$item->id}</a> - <span style='width:200px; display:inline-block'>{$item->collectionName} </span><a href='?action=delete&id={$item->id}'>Xoá</a> <br/> ";
+?>
+
+</table>

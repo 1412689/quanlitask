@@ -1,0 +1,18 @@
+<h1>THÔNG TIN CÔNG VIỆC</h1>
+<hr/>
+
+<?php
+	if (isset($data)) ?>
+
+Mã Task: <?=$data->id?> <br/>
+Tên Task: <?=$data->taskName?> <br/>
+Mô Tả: <?=$data->description?> <br/>
+Ngày Bắt Đầu: <?=$data->startDate?> <br/>
+Ngày Kết Thúc:<?=$data->dueDate?> <br/>
+Ngày Tạo: <?=$data->createDate?> <br/>
+Mã Collection:<?=$data->collectionId?> <br/>
+Trạng Thái: <?=$data->status?> <br/>
+
+
+<?php	
+?>
